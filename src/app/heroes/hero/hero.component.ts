@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-heroes-hero',
   standalone: false,
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
+  styleUrl: './hero.component.css',
 })
 
 export class HeroComponent {
@@ -17,5 +17,13 @@ export class HeroComponent {
 
   getHeroDescription(): string {
     return `${this.name} - ${this.age}`;
+  }
+
+  changeHero(): void {
+    this.name = 'Spiderman';
+  }
+
+  changeAge(): void {
+    this.age = 17;
   }
 }
