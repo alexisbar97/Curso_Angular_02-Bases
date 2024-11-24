@@ -1,8 +1,22 @@
 h1 {
   font-size: 50px;
+  font-weight: bolder;
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:black;
+}
+
+td {
+  font-size: 40px;
+  font-weight: bolder;
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:rgb(17, 17, 31);
 }
 
 dd {
   font-size: 2rem;
-  font-weight: bold;
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:rgb(144, 147, 146);
 }
