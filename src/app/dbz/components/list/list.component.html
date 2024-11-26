@@ -11,6 +11,10 @@
     "
 
     class="list-group-item"
+    [ngClass]="{
+      'list-group-item-success': isLast,
+      'list-group-item-primary': isEven,
+    }"
   >
     <!-- <span class="text-primary">{{i+1}}. </span> -->
     <span class="text-primary">{{i}}. </span>
@@ -21,23 +25,28 @@
     <span>{{character.power}}</span>
     <br>
 
-    <span>Es el Primero: {{i === 0}}. (Utilizando i === 0)</span>
+    <!--
+
+    <span>Es el Primero: {{i === 0}}.</span>
     <br>
-    <span>Es el Primero: {{isFirst}}. (Utilizando isFirst)</span>
+    <span>Es el Primero: {{isFirst}}.</span>
     <br>
 
-    <span>Es el Último: {{i === characterList.length-1}}. (Utilizando i === characterList.length-1)</span>
+    <span>Es el Último: {{i === characterList.length-1}}.</span>
     <br>
-    <span>Es el Último: {{isLast}}. (Utilizando isLast)</span>
-    <br>
-
-    <span>Es Par: {{i%2 === 0}}. (Utilizando i%2 === 0)</span>
-    <br>
-    <span>Es Par: {{isEven}}. (Utilizando isEven)</span>
+    <span>Es el Último: {{isLast}}.</span>
     <br>
 
-    <span>Es Impar: {{i%2 !== 0}}. (Utilizando i%2 !== 0)</span>
+    <span>Es Par: {{i%2 === 0}}.</span>
     <br>
-    <span>Es Impar: {{isOdd}}. (Utilizando isOdd)</span>
+    <span>Es Par: {{isEven}}.</span>
+    <br>
+
+    <span>Es Impar: {{i%2 !== 0}}.</span>
+    <br>
+    <span>Es Impar: {{isOdd}}.</span>
+
+    -->
+
   </li>
 </ul>
