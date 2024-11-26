@@ -5,7 +5,11 @@
 <div class="row">
   <!-- .col para crear <div class="col"></div> -->
   <div class="col">
-    <dbz-list [characterList]="characters"></dbz-list>
+    <dbz-list
+      [characterList]="characters"
+      (onDelete)="onDeleteCharacter($event)"
+    >
+    </dbz-list>
   </div>
 
   <!-- .col para crear <div class="col"></div> -->

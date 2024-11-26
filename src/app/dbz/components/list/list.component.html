@@ -10,20 +10,21 @@
     let isOdd = odd;
     "
 
-    class="list-group-item"
+    class="list-group-item d-flex justify-content-between aling-items-center"
     [ngClass]="{
       'list-group-item-success': isLast,
       'list-group-item-primary': isEven,
     }"
   >
-    <!-- <span class="text-primary">{{i+1}}. </span> -->
-    <span class="text-primary">{{i}}. </span>
+    <div>
+      <!-- <span class="text-primary">{{i+1}}. </span> -->
+      <span class="text-primary">{{i}}. </span>
 
-    <span>{{character.name}} - </span>
+      <span>{{character.name}} - </span>
 
-    <strong>Power: </strong>
-    <span>{{character.power}}</span>
-    <br>
+      <strong>Power: </strong>
+      <span>{{character.power}} </span>
+    </div>
 
     <!--
 
@@ -47,6 +48,8 @@
     <span>Es Impar: {{isOdd}}.</span>
 
     -->
+
+    <button (click)="onDeleteCharacter(i)" class="btn btn-danger">X</button>
 
   </li>
 </ul>
