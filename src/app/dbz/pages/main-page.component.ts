@@ -1,7 +1,7 @@
 // a-component para crear la plantilla del componente
 
 import { Component } from '@angular/core';
-import { Character } from '../interfaces/character.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-dbz-main-page',
@@ -10,25 +10,7 @@ import { Character } from '../interfaces/character.interface';
 })
 
 export class MainPageComponent {
-  public characters: Character[] = [{
-    name: 'Krillin',
-    power: 1000,
-  },
-  {
-    name: 'Gokú',
-    power: 9500,
-  },
-  {
-    name: 'Vegeta',
-    power: 7500,
-  },
-  ];
+  constructor(public DbzService: DbzService) {
 
-  onNewCharacter(character: Character): void {
-    this.characters.push(character);
-  }
-
-  onDeleteCharacter(index: number): void {
-    this.characters.splice(index,1);
   }
 }

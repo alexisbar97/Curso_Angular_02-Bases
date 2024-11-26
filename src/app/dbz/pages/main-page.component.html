@@ -5,15 +5,20 @@
 <div class="row">
   <!-- .col para crear <div class="col"></div> -->
   <div class="col">
+    <!-- main-page.component (Componente Padre) y list.component (Componente Hijo) -->
     <dbz-list
-      [characterList]="characters"
-      (onDelete)="onDeleteCharacter($event)"
+      [characterList]="DbzService.characters"
+      (onDelete)="DbzService.onDeleteCharacter($event)"
     >
     </dbz-list>
   </div>
 
   <!-- .col para crear <div class="col"></div> -->
   <div class="col">
-    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+    <!-- main-page.component (Componente Padre) y add-character.component (Componente Hijo) -->
+    <dbz-add-character
+      (onNewCharacter)="DbzService.onNewCharacter($event)"
+    >
+    </dbz-add-character>
   </div>
 </div>
