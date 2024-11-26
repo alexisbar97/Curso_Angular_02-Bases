@@ -1,3 +1,5 @@
+// a- para usar Angular Snippets
+
 import { Component } from "@angular/core";              //
 
 @Component({                                            //
@@ -23,5 +25,3 @@ export class CounterComponent {                         //
     this.counter = 10;                                  //
   }
 }
-
-// a- para usar Angular Snippets

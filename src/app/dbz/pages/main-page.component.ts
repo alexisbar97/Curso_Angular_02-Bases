@@ -1,16 +1,27 @@
 // a-component para crear la plantilla del componente
 
-import { Component } from '@angular/core';
-import { DbzService } from '../services/dbz.service';
+import { Component } from '@angular/core';                            //
+import { DbzService } from '../services/dbz.service';                 //
+import { Character } from '../interfaces/character.interface';        //
 
-@Component({
-  selector: 'app-dbz-main-page',
-  templateUrl: './main-page.component.html',
-  standalone: false,
+@Component({                                                          //
+  selector: 'app-dbz-main-page',                                      //
+  templateUrl: './main-page.component.html',                          //
+  standalone: false,                                                  //
 })
 
-export class MainPageComponent {
-  constructor(public DbzService: DbzService) {
+export class MainPageComponent {                                      //
+  constructor(private dbzService: DbzService){}                       //
 
+  get characters(): Character[] {                                     //
+    return [...this.dbzService.characters];                           //
+  }
+
+  onDeleteCharacter(id: string): void {                               //
+    this.dbzService.deleteCharacterById(id);                          //
+  }
+
+  onNewCharacter(character: Character) {                              //
+    this.dbzService.addCharacter(character);                          //
   }
 }

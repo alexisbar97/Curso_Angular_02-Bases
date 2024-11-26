@@ -1,34 +1,34 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core';            //
 
-@Component({
-  selector: 'app-heroes-hero',
-  standalone: false,
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css',
+@Component({                                          //
+  selector: 'app-heroes-hero',                        //
+  standalone: false,                                  //
+  templateUrl: './hero.component.html',               //
+  styleUrl: './hero.component.css',                   //
 })
 
-export class HeroComponent {
-  public name: string = 'Ironman';
-  public age: number = 45;
+export class HeroComponent {                          //
+  public name: string = 'Ironman';                    //
+  public age: number = 45;                            //
 
-  get capitalizedName(): string {
-    return '¡Hola Mundo!';
+  get capitalizedName(): string {                     //
+    return '¡Hola Mundo!';                            //
   }
 
-  getHeroDescription(): string {
-    return `${this.name} - ${this.age}`;
+  getHeroDescription(): string {                      //
+    return `${this.name} - ${this.age}`;              //
   }
 
-  changeHero(): void {
-    this.name = 'Spiderman';
+  changeHero(): void {                                //
+    this.name = 'Spiderman';                          //
   }
 
-  changeAge(): void {
-    this.age = 17;
+  changeAge(): void {                                 //
+    this.age = 17;                                    //
   }
 
-  resetForm(): void {
-    this.name = 'Ironman';
-    this.age = 45;
+  resetForm(): void {                                 //
+    this.name = 'Ironman';                            //
+    this.age = 45;                                    //
   }
 }

@@ -1,24 +1,28 @@
-<h1>DBZ Personajes</h1>
-<hr>
+<h1>DBZ Personajes</h1>   <!--  -->
+<hr>                      <!--  -->
 
-<!-- .row para crear <div class="row"></div> -->
-<div class="row">
-  <!-- .col para crear <div class="col"></div> -->
-  <div class="col">
+<div class="row">         <!-- .row para crear <div class="row"></div> -->
+
+  <div class="col">       <!-- .col para crear <div class="col"></div> -->
+
     <!-- main-page.component (Componente Padre) y list.component (Componente Hijo) -->
     <dbz-list
-      [characterList]="DbzService.characters"
-      (onDelete)="DbzService.deleteCharacterById($event)"
+      [characterList]="characters"
+      (onDelete)="onDeleteCharacter($event)"
     >
     </dbz-list>
+
   </div>
 
-  <!-- .col para crear <div class="col"></div> -->
-  <div class="col">
+
+  <div class="col">       <!-- .col para crear <div class="col"></div> -->
+
     <!-- main-page.component (Componente Padre) y add-character.component (Componente Hijo) -->
     <dbz-add-character
-      (onNewCharacter)="DbzService.onNewCharacter($event)"
+      (onNewCharacter)="onNewCharacter($event)"
     >
     </dbz-add-character>
+
   </div>
+
 </div>
